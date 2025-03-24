@@ -1,0 +1,52 @@
+Bitwise
+
+128 64 32 16 8 4 2 1
+     1  1  0 0 1 0 0 -> 100
+     0  0  1 0 1 0 0 -> 20
+&
+     0  0  0 0 1 0 0 -> _4_
+
+128 64 32 16 8 4 2 1
+          1  0 0 0 1 -> 17
+	  1  0 1 0 1 -> 21
+|
+	  1  0 1 0 1 -> _21_
+
+128 64 32 16 8 4 2 1
+	  1  0 0 0 1 -> 17
+	  0  1 0 1 0 -> 10
+(17 | 10)
+	  1  1 0 1 1 -> _27
+	  0  0 1 1 0 -> 6
+&
+	  0  0 0 1 0 -> _2_
+
+128 64 32 16 8 4 2 1
+        0 1  0 0 1 0 -> 18
+	1 1  0 0 1 0 -> 50
+^
+	1 0  0 0 0 0 -> 32
+
+
+_fibonacci_
+a = 0
+b = 1
+sum = a + b
+a = b
+b = sum
+
+_factorial_
+n = 5
+5 * 4 * 3 * 2 * 1
+factorial(n) = factorial(n-1) * n
+factorial(5) = 5 * factorial(4)
+		|
+factorial(4) = 4 * factorial(3)
+		|
+factorial(3) = 3 * factorial(2)
+		|
+factorial(2) = 2 * factorial(1)
+		|
+factorial(1) = 1 * factorial(0)
+		|
+factorial(0) = 1
